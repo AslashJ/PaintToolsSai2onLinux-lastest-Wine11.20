@@ -67,6 +67,34 @@ That is **not** a claim that all tablets, Linux distributions, GPU stacks, or SA
 
 The prebuilt install path was also tested from an isolated, initially empty HOME on the maintainer's CachyOS/glibc 2.44 host. It installed the runtime, created a fresh win64 prefix, passed cmd /c ver, and created Desktop/menu shortcuts without launching SAI2. Contributors can repeat this packaging check with tests/smoke-clean-install.sh /absolute/path/to/official-64-bit-sai2.exe [runtime-archive.tar.xz]. This does not replace the physical-tablet test.
 
+Personal Compatibility Test Results
+
+Note: If you prefer not to use this patch, you can try testing different Wine versions yourself. The following results are based on my own tests using PaintTool SAI 2 under Wayland/X11. Your results may differ depending on your Linux distribution, Wine configuration, graphics environment, tablet hardware, and drivers.
+
+These results represent my personal testing only and are not a guarantee of compatibility for every system.
+
+Wine Staging
+
+Tested under Wayland/X11.
+
+Wine Version
+Working
+9.1, 9.3, 9.4
+Not working
+9.5, 9.10, 9.15, 9.22, 10.15, 11.19
+
+Wine Vanilla (Standard Wine)
+
+Tested under Wayland/X11.
+
+Wine Version
+Working
+9.4, 9.5, 9.13, 9.18, 9.21
+Not working
+9.22, 10.0, 11.19
+
+Please keep in mind: These results refer to my own pen-pressure tests with PaintTool SAI 2. They do not necessarily indicate whether other Wine features or applications work correctly on those versions.
+
 ## Licensing and trademarks
 
 Wine is a third-party project; its upstream license texts are kept under LICENSES/. This repository contains a patch against Wine and helper scripts, not SAI2. PaintTool SAI and SAI2 are trademarks/software of SYSTEMAX; this project is independent and is not affiliated with or endorsed by SYSTEMAX or WineHQ.
